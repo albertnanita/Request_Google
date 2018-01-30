@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+
+    <tab
+        icon="@drawable/list_icon"
+        id="@+id/tab_list"
+        title="@string/list"/>
+
+    <tab
+        icon="@drawable/graph_icon"
+        id="@+id/tab_graph"
+        title="@string/graph"/>
+
+</tabs>

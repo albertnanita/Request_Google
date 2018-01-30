@@ -1,0 +1,11 @@
+.gradle
+/local.properties
+.DS_Store
+/build
+
+# generated files
+.idea/
+
+# Intellij project files
+build/
+*.iml

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activityBackground"
+    android:orientation="vertical">
+
+    <!-- This is how a Google engineer says to theme your toolbar: https://chris.banes.me/2014/11/12/theme-vs-style/ -->
+    <!--<android.support.v7.widget.Toolbar-->
+    <!--android:id="@+id/activity_main_toolbar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="?android:attr/actionBarSize"-->
+    <!--android:background="?android:attr/colorPrimaryDark"-->
+    <!--android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar"-->
+    <!--app:title="@string/requests"/>-->
+
+    <!-- Not all of the attributes used above are available on KitKat, our min SDK, so I changed it
+    up a bit using the support library. -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/activity_main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <FrameLayout
+        android:id="@+id/activity_main_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <com.roughike.bottombar.BottomBar
+        android:id="@+id/activity_main_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        app:bb_tabXmlResource="@xml/bottom_bar_tabs"/>
+
+</LinearLayout>
